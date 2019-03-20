@@ -15,6 +15,7 @@ oauthlib = "*"
 requests-oauthlib = "*"
 flake8 = "*"
 amqp = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.6"
