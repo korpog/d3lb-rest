@@ -1,1 +1,1 @@
-web: gunicorn d3lb-rest.wsgi --log-file -
+web: gunicorn d3leaderboards.wsgi --log-file -
