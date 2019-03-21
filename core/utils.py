@@ -153,4 +153,5 @@ def update_leaderboards(season):
             for i, q in enumerate(qs):
                 q.rank = i + 1
                 q.save()
-    cleanup = Record.objects.filter(rank__gt=1000).delete()    
+    cleanup = Record.objects.filter(rank__gt=50)
+    cleanup.delete()
