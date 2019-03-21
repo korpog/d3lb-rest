@@ -36,7 +36,7 @@ class LeaderboardSerializer(serializers.ModelSerializer):
                   'game_mode', 'season', 'records')
 
     def paginated_records(self, obj):
-        page_size = 50
+        page_size = 20
         paginator = Paginator(obj.records.filter(
             leaderboard_id=obj.id), page_size)
         page = self.context['request'].query_params.get('page') or 1
