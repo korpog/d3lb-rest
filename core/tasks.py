@@ -6,7 +6,7 @@ from .models import Leaderboard
 
 @app.task
 def update_lb():
-    update_leaderboards(1)
+    update_leaderboards(16)
     print("Leaderboards updated!")
 
 
