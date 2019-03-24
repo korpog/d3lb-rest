@@ -1,3 +1,4 @@
+import django_heroku
 """
 Django settings for d3leaderboards project.
 
@@ -127,7 +128,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CELERY_BROKER_URL = 'amqp://localhost'
+CELERY_BROKER_URL = 'redis://'
+CELERY_RESULT_BACKEND = 'redis://'
 CELERY_IMPORTS = ['core.tasks']
 
 REST_FRAMEWORK = {
@@ -142,5 +144,4 @@ CORS_ORIGIN_WHITELIST = (
     'korpog.github.io'
 )
 
-import django_heroku
 django_heroku.settings(locals())

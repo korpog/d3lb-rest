@@ -8,7 +8,7 @@ from core.utils import create_leaderboards, create_solo_lb
 def seed_db(apps, schema_editor):
     create_leaderboards()
     create_solo_lb()
-    cleanup = Record.objects.filter(rank__gt=1000).delete()
+    cleanup = Record.objects.filter(rank__gt=100).delete()
 
 
 class Migration(migrations.Migration):
