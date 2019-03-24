@@ -128,8 +128,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CELERY_BROKER_URL = 'redis://'
-CELERY_RESULT_BACKEND = 'redis://'
+CELERY_BROKER_URL = os.environ['REDIS_URL']
+CELERY_RESULT_BACKEND = os.environ['REDIS_URL']
 CELERY_IMPORTS = ['core.tasks']
 
 REST_FRAMEWORK = {
