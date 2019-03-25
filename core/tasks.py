@@ -13,6 +13,6 @@ def update_lb():
 app.conf.beat_schedule = {
     "update-leaderboards-task": {
         "task": "core.tasks.update_lb",
-        "schedule": 500.0
+        "schedule": 86400.0
     }
 }
