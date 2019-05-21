@@ -73,7 +73,7 @@ def create_leaderboards():
     for region in regions:
         for class_name in classes:
             for game_mode in game_modes:
-                for i in range(16, 17):
+                for i in range(17, 18):
                     if (class_name == 'necromancer' and i < 11):
                         pass
                     else:
@@ -92,7 +92,7 @@ def create_solo_lb():
     """ Get a Top 1000 records from all classes for a given region, game mode and season """
     for region in regions:
         for game_mode in game_modes:
-            for i in range(16, 17):
+            for i in range(17, 18):
                 solo_lb = Leaderboard(slug=f'{region}-solo-{game_mode}s{i}', region=region,
                                       class_name='solo', game_mode=game_mode, season=i)
                 solo_lb.save()
