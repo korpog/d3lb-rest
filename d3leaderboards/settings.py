@@ -140,8 +140,8 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
-    'korpog.github.io'
+    'https://localhost:3000',
+    'https://korpog.github.io'
 )
 
 django_heroku.settings(locals())
