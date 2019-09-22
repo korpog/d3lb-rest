@@ -39,6 +39,9 @@ class Leaderboard(models.Model):
     season = models.IntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(16)], default=1)
 
+    class Meta:
+        ordering = ['id']
+
     def __str__(self):
         return self.slug
 

@@ -1,5 +1,6 @@
 from django.test import TestCase
 from .models import Leaderboard
+from django.http import HttpResponse
 
 
 class LeaderboardCase(TestCase):
@@ -24,3 +25,9 @@ class LeaderboardCase(TestCase):
     def test_lb_gamemode(self):
         lb = self.lb1
         self.assertEqual(lb.game_mode, "Seasonal Softcore")
+
+    class APITests(TestCase):
+
+        def test_something():
+            pass
+
