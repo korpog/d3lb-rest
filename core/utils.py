@@ -12,7 +12,7 @@ regions = ['us', 'eu', 'kr']
 classes = ['barbarian', 'necromancer', 'crusader', 'dh',
            'monk', 'wd', 'wizard']
 game_modes = ['', 'hardcore-']
-current_season = 18
+current_season = 19
 
 
 def get_access_token():
@@ -38,7 +38,7 @@ def get_data(access_token, region, class_name, season, game_mode=''):
     Allowed argument values:
     region: us, eu, kr
     class_name: barbarian, dh, monk, wizard, wd, necromancer
-    season: 1 to 18 (as of September 2019)
+    season: 1 to 19 (as of November 2019)
     gamemode: 'hardcore-' or '' (default value)
 
     """
@@ -73,7 +73,7 @@ def create_leaderboards():
     for region in regions:
         for class_name in classes:
             for game_mode in game_modes:
-                for i in range(18, 19):
+                for i in range(current_season, current_season + 1):
                     if (class_name == 'necromancer' and i < 11):
                         pass
                     else:
@@ -92,7 +92,7 @@ def create_solo_lb():
     """ Get a Top 1000 records from all classes for a given region, game mode and season """
     for region in regions:
         for game_mode in game_modes:
-            for i in range(18, 19):
+            for i in range(current_season, current_season + 1):
                 solo_lb = Leaderboard(slug=f'{region}-solo-{game_mode}s{i}', region=region,
                                       class_name='solo', game_mode=game_mode, season=i)
                 solo_lb.save()
