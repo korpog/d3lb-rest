@@ -17,8 +17,8 @@ flake8 = "*"
 amqp = "*"
 django-heroku = "*"
 gunicorn = "*"
-psycopg2 = "*"
 redis = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.6"
