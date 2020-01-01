@@ -125,7 +125,7 @@ def update_leaderboards(season):
                 if (class_name == 'necromancer' and season < 11):
                     pass
                 else:
-                    data = get_data(token, region, class_name, season)
+                    data = get_data(token, region, class_name, season, game_mode=game_mode)
                     lb = Leaderboard.objects.get(
                         slug=f'{region}-{class_name}-{game_mode}s{season}')
                     process_data(lb, data)
